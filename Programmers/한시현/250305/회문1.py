@@ -29,4 +29,4 @@ for test_case in range(1, T + 1):
             if word == word[::-1]:
                 count += 1
 
-    print(table)
+    print(f'#{test_case} {count}')
