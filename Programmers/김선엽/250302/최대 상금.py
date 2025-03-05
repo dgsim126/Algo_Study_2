@@ -9,7 +9,6 @@ def solution(num, trial):
             else:
                 num_list[-1], num_list[-2] = num_list[-2], num_list[-1]
 
-
         cur = int(num_list[i])
         max = 0
         max_i = 0
