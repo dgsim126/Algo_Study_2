@@ -1,7 +1,7 @@
 from collections import deque
 
 for test_case in range(10):
-    nums = deque(map(int, input().split()))
+    nums = deque(list(map(int, input().split())))
 
     count = 1
     while True:
