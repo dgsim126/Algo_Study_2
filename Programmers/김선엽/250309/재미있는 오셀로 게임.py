@@ -15,8 +15,6 @@ def solution(board):
 
 solution([[2,4],[3,3]])
 
-
-
 # 구글
 
 T = int(input())
