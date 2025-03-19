@@ -10,12 +10,8 @@ for test_case in range(1, T + 1):
     danjo = 0
     for comb in comb_list:
         is_danjo = True
-
-        #print(comb)
         check = str(comb[0] * comb[1])
-        #print(check)
         len_check = len(check)
-        #print(len_check)
 
         if len_check != 1:
             for i in range(len_check-1):
