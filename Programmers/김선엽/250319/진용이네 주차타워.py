@@ -3,7 +3,7 @@ from collections import deque
 def solution(n, m, R, W, cars):
     parking_fee = 0     # 총 요금 계산
     parking_spot = {}   # 주차한 자리
-    is_in = [False] * n     # 현재 주차공간
+    is_in = [False] * n    # 현재 주차공간
     waiting = deque([])
     cars = deque(cars)
 
