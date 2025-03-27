@@ -11,17 +11,24 @@ for test_case in range(1, T + 1):
     for _ in range(P):
         Cj.append(int(input()))
 
-    covers = []
-    for i in AB:
-        ran = [n for n in range(i[0], i[1]+1)]
-        covers.append(ran)
-
     answer = []
-    for j in Cj:
+    for c in Cj:
         count = 0
-        for cover in covers:
-            if j in cover:
+        for a, b in AB:
+            if a <= c <= b:
                 count += 1
         answer.append(count)
+
+    # covers = []
+    # for i in AB:
+    #     ran = [n for n in range(i[0], i[1]+1)]
+    #     covers.append(ran)
+    #
+    # for j in Cj:
+    #     count = 0
+    #     for cover in covers:
+    #         if j in cover:
+    #             count += 1
+    #     answer.append(count)
 
     print(f'#{test_case}', *answer)
