@@ -24,5 +24,4 @@ for test_case in range(1, T + 1):
                 count += 1
         answer.append(count)
 
-    real_answer = ' '.join(map(str, answer))
-    print(f'#{test_case} {real_answer}')
+    print(f'#{test_case}', *answer)
