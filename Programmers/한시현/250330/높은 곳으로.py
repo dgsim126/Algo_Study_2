@@ -13,4 +13,4 @@ for test_case in range(1, T + 1):
     else:
         print(10**9)
 
-# 엥?
+# 가장 작은 층들을 활용해 P-1 만들고 거기서부터 i층씩 추가
