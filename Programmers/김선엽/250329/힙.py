@@ -13,4 +13,3 @@ def solution(n, heap):
                 return -heapq.heappop(heap)
             else:
                 return -1
-    
