@@ -1,7 +1,6 @@
 from itertools import combinations
 
 def solution(n, lst):
-    # lst= set(lst)
     lst= list(lst)
 
     result= 0
