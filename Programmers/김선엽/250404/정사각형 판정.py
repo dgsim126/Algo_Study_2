@@ -22,7 +22,7 @@ def solution(N, board):
     for i in range(dist):
         if board[x+i][y:y+dist] != string:
             return False
-        
+    
     return True
 
 T = int(input())
