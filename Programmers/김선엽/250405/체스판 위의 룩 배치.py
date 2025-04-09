@@ -25,4 +25,3 @@ for test_case in range(1, T+1):
         print(f"#{test_case} yes")
     else:
         print(f"#{test_case} no")
-
