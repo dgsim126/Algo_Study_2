@@ -10,16 +10,19 @@ def right(board):
 def down(board):
     return
 def left(board):
-    for i in range(board):
-        temp= []
-        for j in range(len(board[i])):
-            if(board[i][j]!=0):
-                temp.append(board[i][j])
-
-        while(len(temp)>=2):
-            if(temp[-1]==temp[-2]):
-                temp[-2]+=temp[-1]
-                temp.pop()
+    for i in range(len(board)):
+        reversed_lst= []
+        for j in range(len(board[i])-1, -1):
+            if(len(reversed_lst)==0):
+                if(board[i][j]!=0):
+                    reversed_lst.append(board[i][j])
+            else:
+                last_value= reversed_lst[-1]
+                if(board[i][j]==last_value):
+                    board[i][j]= (last_value+last_value)
+                else:
+                    reversed_lst.append(last_value)
+        board[i]= reversed_lst
 
 
 
