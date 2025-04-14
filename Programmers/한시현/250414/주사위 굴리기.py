@@ -16,9 +16,8 @@ order = deque(map(int, input().split())) # 1: 우, 2: 좌, 3: 상, 4: 하
 
 dx = [0, 0, -1, 1]
 dy = [1, -1, 0, 0]
-current = [0,0]
 
-dice = [0]*7 # 인덱스 1~6 사용
+dice = [0]*7 # 인덱스 1~6 사용 위해
 
 while order:
     current_order = order.popleft()
