@@ -16,7 +16,7 @@
 #                     if cur[i][j] > max:
 #                         max = cur[i][j]
 #             continue
-        
+
 #         for dx, dy in direction:
 #             diff = copy.deepcopy(cur)
 #             if dx == -1:
