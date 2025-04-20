@@ -16,7 +16,8 @@ def bfs(y, x, board):
 
     while(lst):
         static_current_y, static_current_x, depth, current_word= lst.popleft()
-        if(depth>6):
+        if(depth>6
+        ):
             result.add(current_word)
             continue
 
