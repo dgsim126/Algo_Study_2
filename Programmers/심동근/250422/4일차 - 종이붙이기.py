@@ -1,25 +1,18 @@
-'''
-최빈수 구하기
-가장 많이 나타나는 점수를 구하라(여러 개일때는 큰 점수)
-점수 범위 0 ~ 100
-학생 수 1000
-'''
-def solution(scores):
-    lst= [0]*1001 # 0~1000
+Test_case=int(input())
 
-    for i in range(len(scores)): # 0~999
-        current_score= scores[i]
-        lst[current_score]+=1
+def function(N):
+    if N%10==0:
+        if N==10: #N=10일때 1반환
+            return 1
+        elif N==20: #20x20은 3반환 
+            return 3
+        else:
+            return function(N-10)+(2*function(N-20))
+    else:
+        print("10의 배수만 입력하세요")
 
-    max_score= max(lst)
-
-    for i in range(len(lst)-1, -1, -1): # 1000~0
-        if(lst[i]==max_score):
-            return i
-
-## main ##
-T = int(input())
-for test_case in range(1, T + 1):
-    input()
-    scores= list(map(int, input().split()))
-    print(f"#{test_case} {solution(scores)}")
+for t in range(1, Test_case+1):
+    N=int(input())
+    count=function(N)
+    print("#{} {}".format(t,count))
+출처: https://totoma3.tistory.com/126 [토토모의 분석일지:티스토리]
