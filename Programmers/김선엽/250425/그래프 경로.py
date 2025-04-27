@@ -4,14 +4,9 @@ def solution(V, graph, s, e):
     bridge = {}
     for start, end in graph:
         if start not in bridge:
-            bridge[start] = deque([end])
+            bridge[start] = [end]
         else:
             bridge[start].append(end)
-
-        if end not in bridge:
-            bridge[end] = deque([start])
-        else:
-            bridge[end].append(start)
         
     queue = deque([s])
     visited = [False] * V
@@ -23,7 +18,7 @@ def solution(V, graph, s, e):
         # print(cur)
         visited[cur-1] = True
 
-        if cur == end:
+        if cur == e:
             return 1
 
         if bridge[cur]:
