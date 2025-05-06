@@ -2,7 +2,7 @@ from collections import deque
 
 def solution(string):
     number = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
-    calc = ("+", "*", "/", "-")
+    calc = ("+", "*", "/", "-", "//")
     queue = deque([])
     for s in string:
         if s[0] in number:
@@ -18,9 +18,11 @@ def solution(string):
                 queue.append(x-y)
             elif s == "*":
                 queue.append(x*y)
-            else:
+            elif s == "/" or s == "//":
                 queue.append(x/y)
         elif s == ".":
+            if len(queue) > 1:
+                return "error"
             answer = int(queue.pop())
             return answer
 
