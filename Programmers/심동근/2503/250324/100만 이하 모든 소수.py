@@ -18,8 +18,3 @@ for num in range(23, 1000001, 2):
         result.append(num)
 
 print(*result)
-
-
-
-
-
