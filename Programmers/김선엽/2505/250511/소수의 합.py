@@ -8,7 +8,7 @@ def solution(a, b):
             is_prime = True
             if i % 2 == 0:
                 continue
-            for j in range(2, int(i**(1/2)) + 1):
+            for j in range(3, int(i**(1/2)) + 1, 2):
                 if i % j == 0:
                     is_prime = False
                     break   ## ㅇㅇ
