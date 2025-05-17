@@ -21,4 +21,3 @@ for test_case in range(1, T + 1):
             first_turn = True
 
     print(f'#{test_case} {" ".join(map(str, answer))}')
-    
