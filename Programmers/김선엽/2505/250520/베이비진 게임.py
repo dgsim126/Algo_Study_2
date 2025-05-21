@@ -11,12 +11,14 @@ def solution(cards):
             p1_win = (p1.count(cards[i]) == 3) or ((cards[i] - 1) in set_1 and (cards[i] + 1) in set_1) or (
                         (cards[i] + 1) in set_1 and (cards[i] + 2) in set_1) or (
                                  (cards[i] - 2) in set_1 and (cards[i] - 1) in set_1)
+            p2_win = False
         else:
             p2.append(cards[i])
             set_2 = set(p2)
             p2_win = (p2.count(cards[i]) == 3) or ((cards[i] - 1) in set_2 and (cards[i] + 1) in set_2) or (
                         (cards[i] + 1) in set_2 and (cards[i] + 2) in set_2) or (
                                  (cards[i] - 2) in set_2 and (cards[i] - 1) in set_2)
+            p1_win = False
         # print(p1, p2, p1_win, p2_win)
         if p1_win and not p2_win:
             return 1
